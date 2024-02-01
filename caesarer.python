@@ -1,0 +1,14 @@
+from string import ascii_uppercase
+
+def main(input_string, shift_amount):
+	new_str = ""
+	for c in input_string:
+		if c == ' ':
+			new_str += ' '
+			continue
+		if c == ',':
+			new_str += ','
+			continue
+		new_str += ascii_uppercase[(ascii_uppercase.index(c) + shift_amount) % 26]
+	print(new_str)
+main(input("Please enter a string"), int(input("How much do you want to shift?")))

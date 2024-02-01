@@ -1,0 +1,10 @@
+from string import ascii_uppercase
+
+def main(input_string):
+	for letter in ascii_uppercase:
+		count = 0
+		for c in input_string:
+			if c == letter:
+				count += 1;
+		print(letter + ": " + str(count))
+main(input("Please enter a string to frequency attack: \n"))
